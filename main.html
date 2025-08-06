@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematika Vazifalari</title>
+</head>
+<body>
+
+    <h1>Matematika Vazifalari (Console.log)</h1>
+    <p>Natijalar <strong>console</strong> oynasida ko'rsatiladi.</p>
+
+    <!-- Integer1 -->
+    <div class="task">
+        <h2>Integer1: Masofaning metrga aylantirilishi</h2>
+        <p>Berilgan masofa L: <span id="distance">153</span> santimetr.</p>
+        <p>To'liq metrlar soni: <span id="full_meters"></span></p>
+    </div>
+
+    <!-- Integer2 -->
+    <div class="task">
+        <h2>Integer2: Massaning tonnalarga aylantirilishi</h2>
+        <p>Berilgan massa M: <span id="mass">4500</span> kilogramm.</p>
+        <p>To'liq tonnalarga aylantirilgan massa: <span id="full_tons"></span></p>
+    </div>
+
+    <!-- Integer3 -->
+    <div class="task">
+        <h2>Integer3: Fayl hajmini kilobaytlarga aylantirish</h2>
+        <p>Fayl hajmi: <span id="file_size">10496</span> bayt.</p>
+        <p>To'liq kilobaytlar soni: <span id="full_kb"></span></p>
+    </div>
+
+    <!-- Integer4 -->
+    <div class="task">
+        <h2>Integer4: Segmentlar soni</h2>
+        <p>Berilgan segment uzunligi A: <span id="A">250</span></p>
+        <p>Berilgan segment uzunligi B: <span id="B">40</span></p>
+        <p>To'liq segmentlar soni: <span id="segments"></span></p>
+    </div>
+
+    <!-- Integer5 -->
+    <div class="task">
+        <h2>Integer5: Bo'sh qism uzunligi</h2>
+        <p>Berilgan segment uzunligi A: <span id="A5">250</span></p>
+        <p>Berilgan segment uzunligi B: <span id="B5">40</span></p>
+        <p>Qolgan bo'sh qism uzunligi: <span id="remainder"></span></p>
+    </div>
+
+    <!-- Integer6 -->
+    <div class="task">
+        <h2>Integer6: Ikki raqamli sonni ajratish</h2>
+        <p>Berilgan son: <span id="two_digit_number">56</span></p>
+        <p>Chap raqam (onliklar): <span id="tens_digit"></span></p>
+        <p>O'ng raqam (birliklar): <span id="ones_digit"></span></p>
+    </div>
+
+    <!-- Integer7 -->
+    <div class="task">
+        <h2>Integer7: Raqamlar yig'indisi va ko'paytmasi</h2>
+        <p>Berilgan son: <span id="number7">39</span></p>
+        <p>Raqamlar yig'indisi: <span id="sum"></span></p>
+        <p>Raqamlar ko'paytmasi: <span id="product"></span></p>
+    </div>
+
+    <!-- Integer8 -->
+    <div class="task">
+        <h2>Integer8: Raqamlarni joylashtirish</h2>
+        <p>Berilgan son: <span id="swap_number">56</span></p>
+        <p>Raqamlar joylashtirilgan son: <span id="swapped_number"></span></p>
+    </div>
+
+    <script>
+        // Integer1: Masofaning metrga aylantirilishi
+        let L = 153;
+        let fullMeters = Math.floor(L / 100); // 1 metr = 100 sm
+        console.log("Integer1: To'liq metrlar soni:", fullMeters);
+
+        // Integer2: Massaning tonnalarga aylantirilishi
+        let M = 4500;
+        let fullTons = Math.floor(M / 1000); // 1 tonna = 1000 kg
+        console.log("Integer2: To'liq tonnalarga aylantirilgan massa:", fullTons);
+
+        // Integer3: Fayl hajmini kilobaytlarga aylantirish
+        let fileSize = 10496;
+        let fullKb = Math.floor(fileSize / 1024); // 1 kilobayt = 1024 bayt
+        console.log("Integer3: To'liq kilobaytlar soni:", fullKb);
+
+        // Integer4: Segmentlar soni
+        let A = 250;
+        let B = 40;
+        let segments = Math.floor(A / B); // To'liq segmentlar soni
+        console.log("Integer4: To'liq segmentlar soni:", segments);
+
+        // Integer5: Bo'sh qism uzunligi
+        let remainder = A % B; // Qolgan bo'sh qism
+        console.log("Integer5: Qolgan bo'sh qism uzunligi:", remainder);
+
+        // Integer6: Ikki raqamli sonni ajratish
+        let number6 = 56;
+        let tens6 = Math.floor(number6 / 10); // Onliklar
+        let ones6 = number6 % 10; // Birliklar
+        console.log("Integer6: Chap raqam (onliklar):", tens6);
+        console.log("Integer6: O'ng raqam (birliklar):", ones6);
+
+        // Integer7: Raqamlar yig'indisi va ko'paytmasi
+        let number7 = 39;
+        let sum7 = Math.floor(number7 / 10) + (number7 % 10); // Raqamlar yig'indisi
+        let product7 = Math.floor(number7 / 10) * (number7 % 10); // Raqamlar ko'paytmasi
+        console.log("Integer7: Raqamlar yig'indisi:", sum7);
+        console.log("Integer7: Raqamlar ko'paytmasi:", product7);
+
+        // Integer8: Raqamlarni joylashtirish
+        let swapNumber = 56;
+        let swappedNumber = (swapNumber % 10) * 10 + Math.floor(swapNumber / 10); // Raqamlarni joylashtirish
+        console.log("Integer8: Raqamlar joylashtirilgan son:", swappedNumber);
+    </script>
+
+</body>
+</html>
